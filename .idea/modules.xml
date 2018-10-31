@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/laba.iml" filepath="$PROJECT_DIR$/.idea/modules/laba.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/laba_main.iml" filepath="$PROJECT_DIR$/.idea/modules/laba_main.iml" group="laba" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/laba_test.iml" filepath="$PROJECT_DIR$/.idea/modules/laba_test.iml" group="laba" />
+    </modules>
+  </component>
+</project>
