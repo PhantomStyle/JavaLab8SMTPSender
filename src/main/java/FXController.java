@@ -15,6 +15,8 @@ import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
@@ -23,6 +25,8 @@ import java.io.IOException;
 import java.util.Date;
 
 public class FXController extends Application {
+
+    private static Logger log = LoggerFactory.getLogger(FXController.class);
 
     @FXML
     private TextField recieverField;
@@ -71,6 +75,7 @@ public class FXController extends Application {
             transport.connect(getHost(identifier.getUSERNAME()), identifier.getUSERNAME(), identifier.getPASSWORD());
             setSendScene();
         } catch (Exception ex) {
+            log.info("Error: ", ex);
             Stage st = new Stage();
             st.initModality(Modality.APPLICATION_MODAL);
             VBox dialogVbox = new VBox(20);
@@ -124,6 +129,7 @@ public class FXController extends Application {
             st.show();
 //            transport.close();
         } catch (Exception ex) {
+
             Stage st = new Stage();
             st.initModality(Modality.APPLICATION_MODAL);
             VBox dialogVbox = new VBox(20);
